@@ -10,7 +10,7 @@ const TAX_RATE = 0.09;
 const THRESHOLD = 120;
 const PHONE_PRICE = 99.99;
 
-var account_balance = 500;
+var account_balance = prompt( "Please tell me your account balance $:" );
 var amount = 0;
 
 //Add tax to total spend
