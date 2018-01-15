@@ -50,6 +50,6 @@ function buyPhone() {
     }
 }
 
-//Keep buying phones till you go broke
+//Keep buying phones till you go brok
 while (amount < account_balance)
     buyPhone();
