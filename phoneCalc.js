@@ -11,6 +11,7 @@ const THRESHOLD = 120;
 const PHONE_PRICE = 99.99;
 
 var account_balance = 500;
+var amount = 0;
 
 //Add tax to total spend
 function calcTax(amount) {
@@ -21,7 +22,7 @@ function calcTax(amount) {
 
 //calculate total spend inclusive of tax
 function totalPrice() {
-    var amount = PHONE_PRICE + ACCESSORY_AMOUNT; 
+    amount = PHONE_PRICE + ACCESSORY_AMOUNT; 
 
     if (amount < THRESHOLD) {
         amount = calcTax(amount);
@@ -49,4 +50,6 @@ function buyPhone() {
     }
 }
 
-buyPhone();
+//Keep buying phones till you go broke
+while (amount < account_balance)
+    buyPhone();
